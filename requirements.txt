@@ -3,3 +3,4 @@ Flask-RESTful
 tensorflow
 sentence-transformers
 numpy
+gunicorn
