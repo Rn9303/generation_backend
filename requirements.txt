@@ -1,0 +1,5 @@
+Flask
+Flask-RESTful
+tensorflow
+sentence-transformers
+numpy
