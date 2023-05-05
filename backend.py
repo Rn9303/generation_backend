@@ -27,6 +27,10 @@ def gen_example(prompt):
     max_indices = np.argmax(predictions, axis=-1)
     return max_indices[0]
 
+class Test(Resource):
+	def get(self):
+		return {"response": "Hello World!"}
+
 class Generate(Resource):
 	def post(self):
 		data = request.get_json()
@@ -38,6 +42,7 @@ class Generate(Resource):
 			return {'error': 'No description was provided in the POST request.'}, 400
 
 api.add_resource(Generate, '/generate')
+api.add_resource(Test, '/')
 
 
 if __name__ == '__main__':
