@@ -4,3 +4,4 @@ tensorflow
 sentence-transformers
 numpy
 gunicorn
+flask_cors
