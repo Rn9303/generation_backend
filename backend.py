@@ -22,8 +22,8 @@ model_path = './saved_model'
 model = keras.models.load_model(model_path)
 
 def gen_example(prompt):
-    embedding = emb_model.encode(prompt).reshape(1,384)
-    noise = np.random.normal(0, 1, 20).reshape(1,20)
+    embedding = emb_model.encode(prompt).reshape(1,384) * 6
+    noise = np.random.normal(0, 1, 5).reshape(1,5)
     predictions = model.predict([embedding, noise], verbose=False) 
     # Convert softmax output to int representation
     max_indices = np.argmax(predictions, axis=-1)
