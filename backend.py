@@ -11,7 +11,7 @@ import numpy as np
 
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 api = Api(app)
 
 # embedding model
